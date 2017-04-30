@@ -7,7 +7,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Mulligan's Grocers Contact App"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="true">
         <activity
             android:name=".ScrollingActivity"
             android:label="Mulligan's Grocers"

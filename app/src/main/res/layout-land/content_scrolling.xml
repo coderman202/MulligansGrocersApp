@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    android:id="@+id/mainview"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,17 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
         <TextView style="@style/TextIntro"
             android:id="@+id/intro"
             android:text="@string/intro" />
 
+        <!--The following few linear layouts just with contact info, opening hours about the grocers-->
         <TableLayout
             android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/intro">
+            android:layout_below="@id/intro"
+            android:layout_centerHorizontal="true">
             <TableRow>
                 <ImageView style="@style/Icon"
                     android:src="@drawable/calendar" />
@@ -32,11 +30,12 @@
                 <TextView style="@style/TextStandard"
                     android:text="@string/opening_hours_mon_sat" />
 
+                <ImageView style="@style/Icon"
+                    android:src="@drawable/calendar" />
+
                 <TextView style="@style/TextStandard"
                     android:text="@string/opening_hours_sun" />
-
             </TableRow>
-
             <TableRow>
                 <ImageView style="@style/Icon"
                     android:src="@drawable/phone"/>
@@ -44,42 +43,34 @@
                 <TextView style="@style/TextStandard"
                     android:text="@string/phone"/>
 
+                <ImageView style="@style/Icon"
+                    android:src="@drawable/phone"/>
+
                 <TextView style="@style/TextStandard"
                     android:text="@string/mobile" />
             </TableRow>
+            <TableRow>
+                <ImageView style="@style/Icon"
+                    android:src="@drawable/googlemail" />
+
+                <TextView style="@style/TextStandard"
+                    android:text="@string/email"/>
+            </TableRow>
+            <TableRow>
+                <ImageView style="@style/Icon"
+                    android:src="@drawable/mappin" />
+
+                <TextView style="@style/TextStandard"
+                    android:text="@string/address"/>
+            </TableRow>
         </TableLayout>
-
-        <!--The following few linear layouts just with contact info, opening hours about the grocers-->
-
-        <LinearLayout style="@style/LayoutHorizontal"
-            android:id="@+id/email"
-            android:layout_below="@id/info">
-
-            <ImageView style="@style/Icon"
-                android:src="@drawable/googlemail" />
-
-            <TextView style="@style/TextStandard"
-                android:text="@string/email"/>
-        </LinearLayout>
-
-
-        <LinearLayout style="@style/LayoutHorizontal"
-            android:id="@+id/address"
-            android:layout_below="@id/email">
-
-            <ImageView style="@style/Icon"
-                android:src="@drawable/mappin" />
-
-            <TextView style="@style/TextStandard"
-                android:text="@string/address"/>
-        </LinearLayout>
 
         <!--A map image showing the location pinned. Future versions potentially with google maps
         integration-->
 
         <ImageView style="@style/MapImage"
             android:id="@+id/map"
-            android:layout_below="@id/address"
+            android:layout_below="@id/info"
             android:src="@drawable/map"/>
 
         <fragment
@@ -114,7 +105,11 @@
                     android:src="@drawable/instagramlogo"/>
 
             </LinearLayout>
+
+
         </HorizontalScrollView>
+
+
 
         <!--An image scroller to scroll through a selection of fruit and veg images.
         Currently not working.-->

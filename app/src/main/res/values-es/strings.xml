@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mulligans Grocers Information</string>
+    <string name="email">mulligansgrocers@gmail.com</string>
+    <string name="intro">"Para los mejores en frutas y hortalizas, orgánicas. Fresca de la granja, justo en la puerta "</string>
+    <string name="mobile">086\&#8211;465995</string>
+    <string name="opening_hours_mon_sat">Lun - Sab: 7hs - 19hs</string>
+    <string name="opening_hours_sun">Dom: 10hs - 17hs</string>
+    <string name="phone">01\&#8211;235\&#8211;5969</string>
+    <string name="follow">Síguenos en:</string>
+    <string name="action_settings">Ajustes</string>
+</resources>

@@ -3,5 +3,12 @@
     <dimen name="fab_margin">15dp</dimen>
     <dimen name="icon_margin">15dp</dimen>
     <dimen name="text_margin">15dp</dimen>
+    <dimen name="map_margin">15dp</dimen>
+
     <dimen name="icon_dimen">25dp</dimen>
+
+    <dimen name="normal_text_size">15sp</dimen>
+    <dimen name="header_text_size">17sp</dimen>
+
+    <dimen name="header_text_margin_top">40dp</dimen>
 </resources>

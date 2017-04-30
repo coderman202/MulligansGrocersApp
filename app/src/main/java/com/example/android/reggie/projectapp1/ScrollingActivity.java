@@ -1,31 +1,34 @@
 package com.example.android.reggie.projectapp1;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-public class ScrollingActivity extends AppCompatActivity {
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class ScrollingActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
+
+        MapFragment mapFragment =
+                (MapFragment) getFragmentManager().findFragmentById(R.id.mapdemo);
+        mapFragment.getMapAsync(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         //Hoping to create a scrolling tab of ImageViews in a HorizontalScrollView.
         //Currently not working.
@@ -35,10 +38,20 @@ public class ScrollingActivity extends AppCompatActivity {
             imageView.setId(i);
             imageView.setPadding(2, 2, 2, 2);
             imageView.setImageBitmap(BitmapFactory.decodeResource(
-                    getResources(), R.drawable.carrots));
+                    getResources(), R.drawable.peppers));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             layout.addView(imageView);
         }*/
+    }
+
+    /**
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we
+     * just add a marker near Africa.
+     */
+    @Override
+    public void onMapReady(GoogleMap map) {
+        map.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
 
     @Override
