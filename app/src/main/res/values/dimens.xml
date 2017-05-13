@@ -1,6 +1,5 @@
 <resources>
     <dimen name="app_bar_height">250dp</dimen>
-    <dimen name="fab_margin">15dp</dimen>
     <dimen name="icon_margin">15dp</dimen>
     <dimen name="text_margin">15dp</dimen>
     <dimen name="map_margin">15dp</dimen>
@@ -11,4 +10,6 @@
     <dimen name="header_text_size">17sp</dimen>
 
     <dimen name="header_text_margin_top">40dp</dimen>
+
+    <dimen name="image_margin">15dp</dimen>
 </resources>

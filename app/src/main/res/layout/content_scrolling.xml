@@ -27,6 +27,7 @@
             android:layout_below="@id/intro">
             <TableRow>
                 <ImageView style="@style/Icon"
+                    android:contentDescription="@string/calendar_icon"
                     android:src="@drawable/calendar" />
 
                 <TextView style="@style/TextStandard"
@@ -39,6 +40,7 @@
 
             <TableRow>
                 <ImageView style="@style/Icon"
+                    android:contentDescription="@string/phone_icon"
                     android:src="@drawable/phone"/>
 
                 <TextView style="@style/TextStandard"
@@ -49,92 +51,49 @@
             </TableRow>
         </TableLayout>
 
-        <!--The following few linear layouts just with contact info, opening hours about the grocers-->
+        <!--The following two linear layout just with email
+        contact and physical address of the grocers-->
 
         <LinearLayout style="@style/LayoutHorizontal"
             android:id="@+id/email"
             android:layout_below="@id/info">
 
             <ImageView style="@style/Icon"
+                android:contentDescription="@string/email_icon"
                 android:src="@drawable/googlemail" />
 
             <TextView style="@style/TextStandard"
                 android:text="@string/email"/>
         </LinearLayout>
 
-
         <LinearLayout style="@style/LayoutHorizontal"
             android:id="@+id/address"
             android:layout_below="@id/email">
 
             <ImageView style="@style/Icon"
+                android:contentDescription="@string/map_pin"
                 android:src="@drawable/mappin" />
 
             <TextView style="@style/TextStandard"
                 android:text="@string/address"/>
         </LinearLayout>
 
-        <!--A map image showing the location pinned. Future versions potentially with google maps
-        integration-->
 
-        <ImageView style="@style/MapImage"
-            android:id="@+id/map"
+        <include layout="@layout/social_media_buttons"
+            android:id="@+id/social"
             android:layout_below="@id/address"
-            android:src="@drawable/map"/>
-
-        <fragment
-            android:id="@+id/mapdemo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/map"
-            class="com.google.android.gms.maps.MapFragment"
-            android:name="com.example.android.reggie.projectapp1.ScrollingActivity"/>
+            android:layout_height="wrap_content"/>
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/fruit_veg_img"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/mapdemo">
-
-            <LinearLayout style="@style/LayoutHorizontal">
-
-                <TextView style="@style/TextBoldStandard"
-                    android:id="@+id/follow"
-                    android:text="@string/follow"/>
-
-
-                <ImageView style="@style/Icon"
-                    android:id="@+id/twit"
-                    android:src="@drawable/twitterlogo" />
-
-                <ImageView style="@style/Icon"
-                    android:id="@+id/fb"
-                    android:src="@drawable/facebooklogo"/>
-
-                <ImageView style="@style/Icon"
-                    android:src="@drawable/instagramlogo"/>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <!--An image scroller to scroll through a selection of fruit and veg images.
-        Currently not working.-->
-        <!--<HorizontalScrollView
-            android:layout_width="150dp"
-            android:layout_height="120dp"
-            android:layout_margin="15dp"
-            android:layout_below="@id/intro">
-
-            <LinearLayout
-                android:id="@+id/imagescroller"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-            </LinearLayout>
-
-        </HorizontalScrollView>-->
-
-
-
+            android:contentDescription="@string/fruit_veg_image"
+            android:layout_below="@id/social"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/image_margin"
+            android:src="@drawable/fruit_veg1small"/>
 
     </RelativeLayout>
 

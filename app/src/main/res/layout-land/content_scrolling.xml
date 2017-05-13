@@ -25,12 +25,14 @@
             android:layout_centerHorizontal="true">
             <TableRow>
                 <ImageView style="@style/Icon"
+                    android:contentDescription="@string/calendar_icon"
                     android:src="@drawable/calendar" />
 
                 <TextView style="@style/TextStandard"
                     android:text="@string/opening_hours_mon_sat" />
 
                 <ImageView style="@style/Icon"
+                    android:contentDescription="@string/calendar_icon"
                     android:src="@drawable/calendar" />
 
                 <TextView style="@style/TextStandard"
@@ -38,12 +40,14 @@
             </TableRow>
             <TableRow>
                 <ImageView style="@style/Icon"
+                    android:contentDescription="@string/phone_icon"
                     android:src="@drawable/phone"/>
 
                 <TextView style="@style/TextStandard"
                     android:text="@string/phone"/>
 
                 <ImageView style="@style/Icon"
+                    android:contentDescription="@string/phone_icon"
                     android:src="@drawable/phone"/>
 
                 <TextView style="@style/TextStandard"
@@ -51,6 +55,7 @@
             </TableRow>
             <TableRow>
                 <ImageView style="@style/Icon"
+                    android:contentDescription="@string/email_icon"
                     android:src="@drawable/googlemail" />
 
                 <TextView style="@style/TextStandard"
@@ -58,6 +63,7 @@
             </TableRow>
             <TableRow>
                 <ImageView style="@style/Icon"
+                    android:contentDescription="@string/map_pin"
                     android:src="@drawable/mappin" />
 
                 <TextView style="@style/TextStandard"
@@ -65,72 +71,11 @@
             </TableRow>
         </TableLayout>
 
-        <!--A map image showing the location pinned. Future versions potentially with google maps
-        integration-->
-
-        <ImageView style="@style/MapImage"
-            android:id="@+id/map"
+        <include layout="@layout/social_media_buttons"
+            android:id="@+id/social"
             android:layout_below="@id/info"
-            android:src="@drawable/map"/>
-
-        <fragment
-            android:id="@+id/mapdemo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/map"
-            class="com.google.android.gms.maps.MapFragment"
-            android:name="com.example.android.reggie.projectapp1.ScrollingActivity"/>
-
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/mapdemo">
-
-            <LinearLayout style="@style/LayoutHorizontal">
-
-                <TextView style="@style/TextBoldStandard"
-                    android:id="@+id/follow"
-                    android:text="@string/follow"/>
-
-
-                <ImageView style="@style/Icon"
-                    android:id="@+id/twit"
-                    android:src="@drawable/twitterlogo" />
-
-                <ImageView style="@style/Icon"
-                    android:id="@+id/fb"
-                    android:src="@drawable/facebooklogo"/>
-
-                <ImageView style="@style/Icon"
-                    android:src="@drawable/instagramlogo"/>
-
-            </LinearLayout>
-
-
-        </HorizontalScrollView>
-
-
-
-        <!--An image scroller to scroll through a selection of fruit and veg images.
-        Currently not working.-->
-        <!--<HorizontalScrollView
-            android:layout_width="150dp"
-            android:layout_height="120dp"
-            android:layout_margin="15dp"
-            android:layout_below="@id/intro">
-
-            <LinearLayout
-                android:id="@+id/imagescroller"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-            </LinearLayout>
-
-        </HorizontalScrollView>-->
-
-
-
-
+            android:layout_height="wrap_content"/>
     </RelativeLayout>
 
 </android.support.v4.widget.NestedScrollView>

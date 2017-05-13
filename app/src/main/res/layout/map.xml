@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--A map image showing the location pinned. Future versions potentially with google maps
+        integration-->
+
+    <!--<fragment
+            android:id="@+id/mapdemo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/map"
+            class="com.google.android.gms.maps.MapFragment"
+            android:name="com.example.android.reggie.projectapp1.ScrollingActivity"/>-->
+
+</LinearLayout>

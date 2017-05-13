@@ -5,14 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+public class ScrollingActivity extends AppCompatActivity /*implements OnMapReadyCallback*/ {
 
-public class ScrollingActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private Integer[] foodImages = {R.drawable.carrots1, R.drawable.apples1, R.drawable.peppers1,
+            R.drawable.strawberries1, R.drawable.radishes1};
+
+    private ImageView imgs;
 
 
 
@@ -21,27 +21,15 @@ public class ScrollingActivity extends AppCompatActivity implements OnMapReadyCa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
 
-        MapFragment mapFragment =
+        /*MapFragment mapFragment =
                 (MapFragment) getFragmentManager().findFragmentById(R.id.mapdemo);
-        mapFragment.getMapAsync(this);
+        mapFragment.getMapAsync(this);*/
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
 
-        //Hoping to create a scrolling tab of ImageViews in a HorizontalScrollView.
-        //Currently not working.
-        /*LinearLayout layout = (LinearLayout) findViewById(R.id.imagescroller);
-        for (int i = 0; i < 10; i++) {
-            ImageView imageView = new ImageView(this);
-            imageView.setId(i);
-            imageView.setPadding(2, 2, 2, 2);
-            imageView.setImageBitmap(BitmapFactory.decodeResource(
-                    getResources(), R.drawable.peppers));
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            layout.addView(imageView);
-        }*/
     }
 
     /**
@@ -49,10 +37,10 @@ public class ScrollingActivity extends AppCompatActivity implements OnMapReadyCa
      * we
      * just add a marker near Africa.
      */
-    @Override
+    /*@Override
     public void onMapReady(GoogleMap map) {
         map.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

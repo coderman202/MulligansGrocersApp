@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/likeandfollow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/content_scrolling">
+
+            <LinearLayout style="@style/LayoutHorizontal">
+
+                <TextView style="@style/TextBoldStandard"
+                    android:id="@+id/follow"
+                    android:text="@string/follow"/>
+
+                <ImageView style="@style/Icon"
+                    android:contentDescription="@string/twitter_icon"
+                    android:id="@+id/twit"
+                    android:src="@drawable/twitterlogo" />
+
+                <ImageView style="@style/Icon"
+                    android:contentDescription="@string/facebook_icon"
+                    android:id="@+id/fb"
+                    android:src="@drawable/facebooklogo"/>
+
+                <ImageView style="@style/Icon"
+                    android:contentDescription="@string/instagram_icon"
+                    android:id="@+id/insta"
+                    android:src="@drawable/instagramlogo"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>

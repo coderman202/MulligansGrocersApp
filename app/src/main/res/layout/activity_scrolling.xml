@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/background"
     tools:context="com.example.android.reggie.projectapp1.ScrollingActivity">
 
     <!--Just a scrolling app bar with a nested ImageView-->
@@ -35,6 +34,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/business_image"
                 android:src="@drawable/businesssmall"
                 android:background="@color/background"
                 android:scaleType="centerCrop"/>
